@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="ls" Height="300" Width="550" FontSize="14">
+    <StackPanel Margin="35">
+        <Label Content="Путь к папке:" FontSize="14"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="ContentBox"/>
+            <Button Content="X" HorizontalAlignment="Center" Padding="5,1,5,1" Grid.Column="1" Click="Button_Click"/>
+            <Button Content="Выбрать" HorizontalAlignment="Center" Padding="5,1,5,1" Grid.Column="2" Click="Button_Click_1"/>
+            <CheckBox Grid.Row="1" IsChecked="True" Content="Сканировать файлы" x:Name="Fi"/>
+            <CheckBox Grid.Row="1" Content="Сканировать папки" HorizontalAlignment="Right" x:Name="Fo"/>
+            <CheckBox Grid.Row="2" Content="Сохранять форматы" x:Name="Ex"/>
+            <Grid Grid.ColumnSpan="3" Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="Pa"/>
+                <Button Content="Выбрать путь" HorizontalAlignment="Center" Padding="5,1,5,1" Grid.Column="2" Click="Button_Click_3"/>
+            </Grid>
+            <Button Content="Старт" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Click="Button_Click_2"/>
+        </Grid>
+    </StackPanel>
 </Window>
